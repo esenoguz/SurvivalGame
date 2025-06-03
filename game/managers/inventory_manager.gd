@@ -6,12 +6,14 @@ var inventory : Array = []
 
 func _enter_tree() -> void:
 	EventSystem.INV_try_to_pickup_item.connect(try_to_pickup)
-	
+	EventSystem.INV_ask_update_inventory.connect(send_inventory)
+	EventSystem.INV_switch_two_item_indexes.connect(switch_two_item_indexes)
 
 func _ready() -> void:
 	inventory.resize(INVENTORY_SIZE)
 	
-
+func send_inventory() -> void:
+	EventSystem.INV_inventory_updated.emit(inventory)
 
 func try_to_pickup(item_key : ItemConfig.Keys, destroy_pickupable : Callable) -> void:
 	if not get_free_slots():
@@ -28,3 +30,10 @@ func add_item(item_key : ItemConfig.Keys) -> void:
 		if inventory[i] == null:
 			inventory[i] = item_key
 			break
+
+func switch_two_item_indexes(idx1 : int, idx2 : int) -> void:
+	print("geldik")
+	var item_key1 = inventory[idx1]
+	inventory[idx1] = inventory[idx2]
+	inventory[idx2] = item_key1
+	send_inventory()

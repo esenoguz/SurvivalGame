@@ -11,7 +11,7 @@ extends CharacterBody3D
 func _enter_tree() -> void:
 	EventSystem.PLA_freeze_player.connect(set_freeze.bind(true))
 	EventSystem.PLA_unfreeze_player.connect(set_freeze.bind(false))
-
+	
 func set_freeze(freeze : bool) -> void:
 	set_process(!freeze)
 	set_physics_process(!freeze)

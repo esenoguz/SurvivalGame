@@ -78,8 +78,3 @@ open_crafting_menu={
 3d_physics/layer_1="ground"
 3d_physics/layer_2="actor"
 3d_physics/layer_3="interactable"
-
-[rendering]
-
-renderer/rendering_method="gl_compatibility"
-renderer/rendering_method.mobile="gl_compatibility"
