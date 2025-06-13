@@ -67,6 +67,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.42543, 0.0815656, -0.140373
 [node name="PickupablePlant" parent="Terrain" instance=ExtResource("4_c52ef")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.16211, 0.0132748, -0.165391)
 
+[node name="PickupablePlant2" parent="Terrain" instance=ExtResource("4_c52ef")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.42707, 0.0132748, -0.165391)
+
+[node name="PickupablePlant3" parent="Terrain" instance=ExtResource("4_c52ef")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7744, 0.0132748, -0.165391)
+
+[node name="PickupablePlant4" parent="Terrain" instance=ExtResource("4_c52ef")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.41332, 0.0132748, -0.165391)
+
+[node name="PickupablePlant5" parent="Terrain" instance=ExtResource("4_c52ef")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.41332, 0.0132748, -0.165391)
+
 [node name="Mushroom" parent="." instance=ExtResource("5_udsrc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.516967, 0, -0.929197)
 
