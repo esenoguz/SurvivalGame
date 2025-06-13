@@ -1,0 +1,67 @@
+[gd_scene load_steps=7 format=3 uid="uid://drhpt7gwye5tx"]
+
+[ext_resource type="Texture2D" uid="uid://3jxip5wfmjmk" path="res://textures/panel_blue.png" id="1_dnprm"]
+[ext_resource type="Script" uid="uid://dkgxb4w3k8jbd" path="res://ui/custom_nodes/crafting_button.gd" id="2_djg4a"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pkrq1"]
+bg_color = Color(0.505344, 0.505344, 0.505344, 0.745098)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_flvev"]
+bg_color = Color(0.28485, 0.28485, 0.28485, 0.188235)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ne6yy"]
+bg_color = Color(0.286275, 0.286275, 0.286275, 0.443137)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_accmk"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="CraftingButton" type="TextureRect"]
+custom_minimum_size = Vector2(160, 160)
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_dnprm")
+script = ExtResource("2_djg4a")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="IconTextureRect" type="TextureRect" parent="MarginContainer"]
+layout_mode = 2
+expand_mode = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/disabled = SubResource("StyleBoxFlat_pkrq1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_flvev")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ne6yy")
+theme_override_styles/normal = SubResource("StyleBoxFlat_accmk")

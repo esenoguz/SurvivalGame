@@ -1,4 +1,6 @@
 extends Bulletin
+class_name PlayerMenuBase
+
 
 @onready var inventory_container: GridContainer = %InventoryContainer
 @onready var item_description_label: Label = %ItemDescriptionLabel
